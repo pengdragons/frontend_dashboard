@@ -19,11 +19,11 @@
 	<link href="css/style.css" rel="stylesheet">
 
 	<link href="css/custom.css" rel="stylesheet">
-	<link href="css/la_color_picker.css" rel="stylesheet">
-
+	<link href="css/colorPick.css" rel="stylesheet">
+	<link href="css/colorPick.dark.theme.css" rel="stylesheet">
 </head>
 
-<body>
+<body">
 	<div class="container-fluid container-custom" id="wrapper">
 		<div class="row row-custom">
 			<nav class="sidebar col-xs-12 col-sm-4 col-lg-3 col-xl-2 custom-sidebar">
@@ -643,7 +643,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -663,6 +663,7 @@
 														</div>
 													</div>
 												</div>
+												
 												<div class="jumbotron">
 													<h1 class="mb-4 title-item-config">Tên chương trình</h1>
 													<div class="content-div">
@@ -679,7 +680,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -710,10 +711,9 @@
 																<label for="sort1">
 																	  <i></i>
 																	  <span>2 màu</span>
-																		  
 																</label>
-																<div style="height: 25px;width: 25px;background-color: #009E0F;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
-																<div style="height: 25px;width: 25px;background-color: #ffffff;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
+																<div class="two-color" style="height: 25px;width: 25px;background-color: #009E0F;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
+																<div class="two-color" style="height: 25px;width: 25px;background-color: #ffffff;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
 															</div>
 															
 															<div>
@@ -722,9 +722,9 @@
 																	<i></i>
 																	<span>3 màu</span>
 																</label>
-																<div style="height: 25px;width: 25px;background-color: #009E0F;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
-																<div style="height: 25px;width: 25px;background-color: #93c47d;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
-																<div style="height: 25px;width: 25px;background-color: #ffffff;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
+																<div class="three-color" style="height: 25px;width: 25px;background-color: #009E0F;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
+																<div class="three-color" style="height: 25px;width: 25px;background-color: #93c47d;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
+																<div class="three-color" style="height: 25px;width: 25px;background-color: #ffffff;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
 															</div>
 
 															<div>
@@ -733,10 +733,10 @@
 																	<i></i>
 																	<span>4 màu</span>
 																</label>
-																<div style="height: 25px;width: 25px;background-color: #009E0F;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
-																<div style="height: 25px;width: 25px;background-color: #6aa84f;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
-																<div style="height: 25px;width: 25px;background-color: #93c47d;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
-																<div style="height: 25px;width: 25px;background-color: #ffffff;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
+																<div class="four-color" style="height: 25px;width: 25px;background-color: #009E0F;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
+																<div class="four-color" style="height: 25px;width: 25px;background-color: #6aa84f;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
+																<div class="four-color" style="height: 25px;width: 25px;background-color: #93c47d;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
+																<div class="four-color" style="height: 25px;width: 25px;background-color: #ffffff;display: inline-block;border: 1px solid #A1A4AA;border-radius: 5px;"></div>
 															</div>
 														</div>
 													</div>
@@ -746,14 +746,16 @@
 													<div class="content-div-custom-game">
 														<ul class="select-start-color-and-end-color">
 															<li>
-																<input type="color" id="startColor" name="favcolor" value="#009E0F">
-																<input type="text" value="#009E0F" class="inp" id="colorPicker1">
-																<div class="palette" id="colorPalette1"></div>
+																<!-- <input type="color" id="startColor" name="favcolor" value="#009E0F"> -->
+																<!-- <div type="text" value="#009E0F" class="colorPicker"> -->
+																<!-- <div class="colorPicker"></div> -->
+																<div class="picker" id="picker1"></div>
 															</li>
 															<li>
-																<input type="color" value="#ffffff" id="endtColor" name="head" value="#ffffff">
-																<input type="text" class="inp" id="colorPicker2">
-																<div class="palette" id="colorPalette2"></div>
+																<!-- <input type="color" value="#ffffff" id="endtColor" name="head" value="#ffffff"> -->
+																<!-- <input type="text" value="#009E0F" class="colorPicker"> -->
+																<!-- <div class="colorPicker"></div> -->
+    															<div class="picker" id="picker2"></div>
 															</li>
 														</ul>
 													</div>
@@ -774,7 +776,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -810,7 +812,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -846,7 +848,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -882,7 +884,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -918,7 +920,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -940,50 +942,80 @@
 												</div>
 												<div class="jumbotron">
 													<h1 class="mb-4 title-item-config">Nút quay thưởng</h1>
-													<div class="content-div content-div-custom-game">
+													<div class="content-div-custom-game">
 														<div class="row size-image">
-															<div class="col-md-6">
-																<div class="content-image-and-button">
-																	<div class="position-relation-img">
-																		<img class="image-logo" style="padding: 0;margin: 0;width: 100%;height: 50px;" src="./images/button1.PNG" id="img-avatar"/>
-																		<div class="btn-btn-close-custom">
-																			<a href="#"><i class="fa fa-close"></i></a>
+															<div class="col-md-6 config">
+																<div class="jumbotron">
+																	<div class="content-div" style="margin: 0;">
+																		<div class="size-image">
+																			<div class="width-and-height">
+																				<p class="lead">Chiều cao: 100px</p>
+																				<p class="lead">Chiều rộng: 100px</p>
+																			</div>
+																			<div id="clear-float-size-image"></div>
+																			<div class="content-image-and-button">
+																				<div class="position-relation-img">
+																					<img  class="image-logo" src="./images/button1.PNG" id="img-avatar"/>
+																					<div class="btn-btn-close-custom">
+																						<a href="#"><i class="fa fa-close"></i></a>
+																					</div>
+																					<div class="btn-btn-zoom-img">
+																						<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
+																					</div>
+																				</div>
+																				<ul>
+																					<li>
+																						<a href="./images/button1.PNG" download><span class="fa fa-lg fa-download" ></span></a>
+																					</li>
+																					<li>
+																						<!-- <a href="#" type="file"><span class="fa fa-lg fa-upload"></span></a> -->
+																						<label for="image8" class="fa fa-lg fa-upload"></label>
+																						<input id="image8" class="select-image" style="visibility:hidden; display: none;" type="file">
+																					</li>
+																					<li>
+																						<a href="#"><span class="fa fa-lg fa-undo"></span></a>
+																					</li>
+																				</ul>
+																			</div>
 																		</div>
 																	</div>
-																	<ul>
-																		<li>
-																			<a href="./images/button1.PNG" download><span class="fa fa-lg fa-download" ></span></a>
-																		</li>
-																		<li>
-																			<label for="image8" class="fa fa-lg fa-upload"></label>
-																			<input id="image8" class="select-image" style="visibility:hidden; display: none;" type="file">
-																		</li>
-																		<li>
-																			<a href="#"><span class="fa fa-lg fa-undo"></span></a>
-																		</li>
-																	</ul>
 																</div>
 															</div>
-															<div class="col-md-6">
-																<div class="content-image-and-button">
-																	<div class="position-relation-img">
-																		<img class="image-logo" style="padding: 0;margin: 0;width: 100%;height: 50px" src="./images/button2.PNG" id="img-avatar"/>
-																		<div class="btn-btn-close-custom">
-																			<a href="#"><i class="fa fa-close"></i></a>
+															<div class="col-md-6 config">
+																<div class="jumbotron">
+																	<div class="content-div" style="margin: 0;">
+																		<div class="size-image">
+																			<div class="width-and-height">
+																				<p class="lead">Chiều cao: 100px</p>
+																				<p class="lead">Chiều rộng: 100px</p>
+																			</div>
+																			<div id="clear-float-size-image"></div>
+																			<div class="content-image-and-button">
+																				<div class="position-relation-img">
+																					<img class="image-logo" src="./images/button2.PNG" id="img-avatar"/>
+																					<div class="btn-btn-close-custom">
+																						<a href="#"><i class="fa fa-close"></i></a>
+																					</div>
+																					<div class="btn-btn-zoom-img">
+																						<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
+																					</div>
+																				</div>
+																				<ul>
+																					<li>
+																						<a href="./images/button2.PNG" download><span class="fa fa-lg fa-download" ></span></a>
+																					</li>
+																					<li>
+																						<!-- <a href="#" type="file"><span class="fa fa-lg fa-upload"></span></a> -->
+																						<label for="image9" class="fa fa-lg fa-upload"></label>
+																						<input id="image9" class="select-image" style="visibility:hidden; display: none;" type="file">
+																					</li>
+																					<li>
+																						<a href="#"><span class="fa fa-lg fa-undo"></span></a>
+																					</li>
+																				</ul>
+																			</div>
 																		</div>
 																	</div>
-																	<ul>
-																		<li>
-																			<a href="./images/button2.PNG" download><span class="fa fa-lg fa-download" ></span></a>
-																		</li>
-																		<li>
-																			<label for="image9" class="fa fa-lg fa-upload"></label>
-																			<input id="image9" class="select-image" style="visibility:hidden; display: none;" type="file">
-																		</li>
-																		<li>
-																			<a href="#"><span class="fa fa-lg fa-undo"></span></a>
-																		</li>
-																	</ul>
 																</div>
 															</div>
 														</div>
@@ -1008,7 +1040,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -1044,7 +1076,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -1073,14 +1105,14 @@
 															<div>
 																<input type="radio" name="voice" value="1" id="voice1">
 																<label for="voice1">
-																	<i></i>
+																	<i style="display: none;"></i>
 																	<span class="fa fa-volume-off"></span>
 																</label>
 															</div>
 															<div>
 																<input type="radio" name="voice" value="2" id="voice2">
 																<label for="voice2">
-																	  <i></i>
+																	  <i style="display: none;"></i>
 																	  <span class="fa fa-volume-up"></span>
 																</label>
 															</div>
@@ -1103,7 +1135,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -1139,7 +1171,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -1174,7 +1206,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -1209,7 +1241,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -1248,7 +1280,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -1284,7 +1316,7 @@
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
@@ -1315,17 +1347,17 @@
 															<div id="clear-float-size-image"></div>
 															<div class="content-image-and-button">
 																<div class="position-relation-img">
-																	<img class="image-logo" src="./images/Popup.png" id="img-avatar"/>
+																	<img class="image-logo" src="./images/Popup.PNG" id="img-avatar"/>
 																	<div class="btn-btn-close-custom">
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
 																	<li>
-																		<a href="./images/Popup.png" download><span class="fa fa-lg fa-download" ></span></a>
+																		<a href="./images/Popup.PNG" download><span class="fa fa-lg fa-download" ></span></a>
 																	</li>
 																	<li>
 																		<!-- <a href="#" type="file"><span class="fa fa-lg fa-upload"></span></a> -->
@@ -1342,50 +1374,80 @@
 												</div>
 												<div class="jumbotron">
 													<h1 class="mb-4 title-item-config">Nút quay thưởng</h1>
-													<div class="content-div content-div-custom-game">
+													<div class="content-div-custom-game">
 														<div class="row size-image">
-															<div class="col-md-6">
-																<div class="content-image-and-button">
-																	<div class="position-relation-img">
-																		<img class="image-logo" style="padding: 0;margin: 0;width: 100%;height: 50px;" src="./images/button1.PNG" id="img-avatar"/>
-																		<div class="btn-btn-close-custom">
-																			<a href="#"><i class="fa fa-close"></i></a>
+															<div class="col-md-6 config">
+																<div class="jumbotron">
+																	<div class="content-div" style="margin: 0;">
+																		<div class="size-image">
+																			<div class="width-and-height">
+																				<p class="lead">Chiều cao: 100px</p>
+																				<p class="lead">Chiều rộng: 100px</p>
+																			</div>
+																			<div id="clear-float-size-image"></div>
+																			<div class="content-image-and-button">
+																				<div class="position-relation-img">
+																					<img  class="image-logo" src="./images/button1.PNG" id="img-avatar"/>
+																					<div class="btn-btn-close-custom">
+																						<a href="#"><i class="fa fa-close"></i></a>
+																					</div>
+																					<div class="btn-btn-zoom-img">
+																						<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
+																					</div>
+																				</div>
+																				<ul>
+																					<li>
+																						<a href="./images/button1.PNG" download><span class="fa fa-lg fa-download" ></span></a>
+																					</li>
+																					<li>
+																						<!-- <a href="#" type="file"><span class="fa fa-lg fa-upload"></span></a> -->
+																						<label for="image18" class="fa fa-lg fa-upload"></label>
+																						<input id="image18" class="select-image" style="visibility:hidden; display: none;" type="file">
+																					</li>
+																					<li>
+																						<a href="#"><span class="fa fa-lg fa-undo"></span></a>
+																					</li>
+																				</ul>
+																			</div>
 																		</div>
 																	</div>
-																	<ul>
-																		<li>
-																			<a href="./images/button1.PNG" download><span class="fa fa-lg fa-download" ></span></a>
-																		</li>
-																		<li>
-																			<label for="image18" class="fa fa-lg fa-upload"></label>
-																			<input id="image18" class="select-image" style="visibility:hidden; display: none;" type="file">
-																		</li>
-																		<li>
-																			<a href="#"><span class="fa fa-lg fa-undo"></span></a>
-																		</li>
-																	</ul>
 																</div>
 															</div>
-															<div class="col-md-6">
-																<div class="content-image-and-button">
-																	<div class="position-relation-img">
-																		<img class="image-logo" style="padding: 0;margin: 0;width: 100%;height: 50px" src="./images/button2.PNG" id="img-avatar"/>
-																		<div class="btn-btn-close-custom">
-																			<a href="#"><i class="fa fa-close"></i></a>
+															<div class="col-md-6 config">
+																<div class="jumbotron">
+																	<div class="content-div" style="margin: 0;">
+																		<div class="size-image">
+																			<div class="width-and-height">
+																				<p class="lead">Chiều cao: 100px</p>
+																				<p class="lead">Chiều rộng: 100px</p>
+																			</div>
+																			<div id="clear-float-size-image"></div>
+																			<div class="content-image-and-button">
+																				<div class="position-relation-img">
+																					<img class="image-logo" src="./images/button2.PNG" id="img-avatar"/>
+																					<div class="btn-btn-close-custom">
+																						<a href="#"><i class="fa fa-close"></i></a>
+																					</div>
+																					<div class="btn-btn-zoom-img">
+																						<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
+																					</div>
+																				</div>
+																				<ul>
+																					<li>
+																						<a href="./images/button2.PNG" download><span class="fa fa-lg fa-download" ></span></a>
+																					</li>
+																					<li>
+																						<!-- <a href="#" type="file"><span class="fa fa-lg fa-upload"></span></a> -->
+																						<label for="image19" class="fa fa-lg fa-upload"></label>
+																						<input id="image19" class="select-image" style="visibility:hidden; display: none;" type="file">
+																					</li>
+																					<li>
+																						<a href="#"><span class="fa fa-lg fa-undo"></span></a>
+																					</li>
+																				</ul>
+																			</div>
 																		</div>
 																	</div>
-																	<ul>
-																		<li>
-																			<a href="./images/button2.PNG" download><span class="fa fa-lg fa-download" ></span></a>
-																		</li>
-																		<li>
-																			<label for="image19" class="fa fa-lg fa-upload"></label>
-																			<input id="image19" class="select-image" style="visibility:hidden; display: none;" type="file">
-																		</li>
-																		<li>
-																			<a href="#"><span class="fa fa-lg fa-undo"></span></a>
-																		</li>
-																	</ul>
 																</div>
 															</div>
 														</div>
@@ -1415,17 +1477,17 @@
 															<div id="clear-float-size-image"></div>
 															<div class="content-image-and-button">
 																<div class="position-relation-img">
-																	<img class="image-logo" src="./images/Popup.png" id="img-avatar"/>
+																	<img class="image-logo" src="./images/Popup.PNG" id="img-avatar"/>
 																	<div class="btn-btn-close-custom">
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
 																	<li>
-																		<a href="./images/Popup.png" download><span class="fa fa-lg fa-download" ></span></a>
+																		<a href="./images/Popup.PNG" download><span class="fa fa-lg fa-download" ></span></a>
 																	</li>
 																	<li>
 																		<!-- <a href="#" type="file"><span class="fa fa-lg fa-upload"></span></a> -->
@@ -1451,17 +1513,17 @@
 															<div id="clear-float-size-image"></div>
 															<div class="content-image-and-button">
 																<div class="position-relation-img">
-																	<img class="image-logo" src="./images/Popup.png" id="img-avatar"/>
+																	<img class="image-logo" src="./images/Popup.PNG" id="img-avatar"/>
 																	<div class="btn-btn-close-custom">
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
 																	<li>
-																		<a href="./images/Popup.png" download><span class="fa fa-lg fa-download" ></span></a>
+																		<a href="./images/Popup.PNG" download><span class="fa fa-lg fa-download" ></span></a>
 																	</li>
 																	<li>
 																		<!-- <a href="#" type="file"><span class="fa fa-lg fa-upload"></span></a> -->
@@ -1488,17 +1550,17 @@
 															<div id="clear-float-size-image"></div>
 															<div class="content-image-and-button">
 																<div class="position-relation-img">
-																	<img class="image-logo" src="./images/Popup.png" id="img-avatar"/>
+																	<img class="image-logo" src="./images/Popup.PNG" id="img-avatar"/>
 																	<div class="btn-btn-close-custom">
 																		<a href="#"><i class="fa fa-close"></i></a>
 																	</div>
 																	<div class="btn-btn-zoom-img">
-																		<a href="#"><i class="fa fa-search"></i></a>
+																		<a href="" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-search-plus"></i></a>
 																	</div>
 																</div>
 																<ul>
 																	<li>
-																		<a href="./images/Popup.png" download><span class="fa fa-lg fa-download" ></span></a>
+																		<a href="./images/Popup.PNG" download><span class="fa fa-lg fa-download" ></span></a>
 																	</li>
 																	<li>
 																		<!-- <a href="#" type="file"><span class="fa fa-lg fa-upload"></span></a> -->
@@ -1518,15 +1580,15 @@
 												<div class="jumbotron">
 													<h1 class="mb-4 title-item-config">Loading</h1>
 													<div class="content-div content-div-custom-game" style="background: none;">
-														<input type="text" value="ĐANG MANG QUÀ ĐẾN" style="width: 89%;text-align: center;font-weight: 600;">
-														<button style="width: 9%;padding: 0;border: none;background-color: #6fa8dc;color: white;"><i class="fa fa-pencil"></i></button>
+														<input type="text" class="textEdit" value="ĐANG MANG QUÀ ĐẾN" style="width: 89%;text-align: center;font-weight: 600;">
+														<button class="saveText" style="width: 9%;padding: 0;border: none;background-color: #6fa8dc;color: white;cursor: pointer;"><i class="fa fa-pencil"></i></button>
 													</div>
 												</div>
 												<div class="jumbotron">
 													<h1 class="mb-4 title-item-config">Thông báo nhận thưởng</h1>
 													<div class="content-div content-div-custom-game" style="background: none;">
-														<textarea name="" id="" cols="30" rows="10" style="width: 89%;"></textarea>
-														<button style="width: 9%;padding: 0;border: none;background-color: #6fa8dc;color: white;float: right;"><i class="fa fa-pencil"></i></button>
+														<textarea name="" class="textEdit" id="" cols="30" rows="10" style="width: 89%;"></textarea>
+														<button class="saveText" style="width: 9%;padding: 0;border: none;background-color: #6fa8dc;color: white;float: right;cursor: pointer;"><i class="fa fa-pencil"></i></button>
 														<div style="clear: both;"></div>
 													</div>
 												</div>
@@ -1783,7 +1845,7 @@
 										<div class="jumbotron custom-right">
 											<div class="mb-4 page-iframe-custom">
 												<ul class="nav nav-tabs">
-													<li class="active"><a href="#iframeMobile" data-toggle="tab"><span class="fa fa-3x fa-mobile"></span> Mobile</a></li>
+													<li class="active"><a href="#iframeMobile" class="active show" data-toggle="tab"><span class="fa fa-3x fa-mobile"></span> Mobile</a></li>
 													<li><a href="#iframePc" data-toggle="tab"><span class="fa fa-3x fa-desktop"></span> PC</a></li>
 												</ul>
 											</div>
@@ -1818,7 +1880,26 @@
 			</main>
 		</div>
 	</div>
+	
 
+
+
+
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+				<img style="width: 100%;" src="" alt="">
+			</div>
+		</div>
+		</div>
+	</div>
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -1828,21 +1909,9 @@
 	<script src="js/custom.js"></script>
 	<script src="dist/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="js/la_color_picker.js"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-		integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-		crossorigin="anonymous"></script> -->
-	
-
-	<!-- <script src="js/chart.min.js"></script> -->
-	<!-- <script src="js/chart-data.js"></script> -->
-	<!-- <script src="js/easypiechart.js"></script> -->
-	<!-- <script src="js/easypiechart-data.js"></script> -->
-	<!-- <script src="js/bootstrap-datepicker.js"></script> -->
-	
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-		integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-		crossorigin="anonymous"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+	<script src="js/colorPick.js"></script>
 </body>
 
 </html>

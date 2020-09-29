@@ -36,7 +36,7 @@ html, body{
   display: block;
 }
 .sidebar.col-xs-12.col-sm-4.col-lg-3.col-xl-2.custom-sidebar .sidebar-custom-bottom .logo-name-user div h4{
-  font-size: 20px;
+  font-size: 18px;
   color: #000000;
 }
 .sidebar.col-xs-12.col-sm-4.col-lg-3.col-xl-2.custom-sidebar .sidebar-custom-bottom .sidebar-nav-custom-2 li a{
@@ -46,7 +46,7 @@ html, body{
   padding-left: 50px;
   letter-spacing: normal;
   text-transform: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
 }
 .sidebar.col-xs-12.col-sm-4.col-lg-3.col-xl-2.custom-sidebar .sidebar-custom-bottom .sidebar-nav-custom-2 li a:hover{
@@ -57,7 +57,7 @@ html, body{
 }
 .sidebar.col-xs-12.col-sm-4.col-lg-3.col-xl-2.custom-sidebar .sidebar-nav-custom-1 li a{
   color: #000000;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: normal;
   text-transform: none;
   padding-left: 30px;
@@ -101,7 +101,7 @@ html, body{
   border-radius: 15px;
   padding-left: 70px;
   padding-right: 70px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #02A1E3 !important;
   border: none;
 }
@@ -118,6 +118,7 @@ html, body{
 }
 .page-header.row.justify-center.header-custom .title-campaign{
   font-weight: 700;
+  font-size: 30px;
 }
 .col-xs-12.col-sm-8.col-lg-9.col-xl-10.pt-3.pl-4.ml-auto.content-custom{
   padding: 0 !important;
@@ -136,7 +137,7 @@ html, body{
 }
 .page-header.row.justify-center.header-custom>.btn-page>ul>li button , .page-header.row.justify-center.header-custom>.btn-page>ul>li a{
   border: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   background: none;
   color: #08A3E5;
@@ -168,7 +169,7 @@ html, body{
 
 .page-header.row.justify-center.header-custom>.btn-save-or-default>ul>li>button{
   border: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   border-radius: 15px;
   background-color: #EEA000;
@@ -234,7 +235,7 @@ html, body{
 }
 
 #column_left .level-1>li>a{
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 600;
 }
 #column_left .level-2>li>a{
@@ -264,7 +265,7 @@ html, body{
   box-shadow: 0px 20px 20px -15px  #CBD1D3;
   margin: 0 !important;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   padding: 0;
   padding-top: 25px;
   padding-bottom: 10px;
@@ -289,8 +290,10 @@ html, body{
 .jumbotron .content-div .lead{
   margin: 0 !important;
   /* display: none; */
+  font-size: 15px;
 }
 .jumbotron .content-div{
+  cursor: pointer;
   margin: 25px;
   position: relative;
   box-sizing: border-box;
@@ -343,6 +346,7 @@ html, body{
   list-style: none;
   margin: 0;
   padding: 0;
+  bottom: -20px;
   /* padding-top: 25px; */
   width: 100%;
   position: absolute;
@@ -413,6 +417,12 @@ html, body{
 .jumbotron .content-image-and-button .image-logo{
   /* width: 100%; */
   max-width: 50%;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.jumbotron .content-div-custom-game .content-div .image-logo{
+  max-width: 100%;
 }
 .image-upload>input {
   display: none;
@@ -496,6 +506,9 @@ html, body{
 .content-custom-main .tab-content-custom .tab-pane .content-div-custom-game{
   padding: 25px;
   margin: 0;
+}
+.content-custom-main .tab-content-custom .tab-pane .content-div-custom-game .col-md-6.config{
+  padding: 0;
 }
 .content-custom-main .tab-content-custom .tab-pane .content-div-custom-game.dropdown-music{
   background: none;
@@ -637,6 +650,9 @@ html, body{
 .checkbox.customforminterface2 input:checked + label{
     color: black;
 }
+.checkbox.customforminterface2 input:hover + label:hover{
+  cursor: pointer;
+}
 .checkbox.customforminterface2 input:checked + label i{
     background-image: url('http://kuzroman.com/images/jswiddler/radio-button.svg');
 }
@@ -644,7 +660,7 @@ html, body{
     width: 15px;
     height: 15px;
     display: inline-block;
-    background: #fff url('http://kuzroman.com/images/jswiddler/circle.svg') no-repeat 50%;
+    /* background: #fff url('http://kuzroman.com/images/jswiddler/circle.svg') no-repeat 50%; */
     background-size: 12px;
     position: relative;
     top: 1px;
@@ -677,7 +693,7 @@ padding: 25px;
   width: 15px;
   height: 15px;
   display: inline-block;
-  background: #fff url('http://kuzroman.com/images/jswiddler/circle.svg') no-repeat 50%;
+  /* background: #fff url('http://kuzroman.com/images/jswiddler/circle.svg') no-repeat 50%; */
   background-size: 12px;
   position: relative;
   top: 1px;
@@ -716,7 +732,18 @@ padding: 25px;
   display: none;
 }
 
-
+.picker {
+  border-radius: 5px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  -webkit-transition: all linear .2s;
+  -moz-transition: all linear .2s;
+  -ms-transition: all linear .2s;
+  -o-transition: all linear .2s;
+  transition: all linear .2s;
+  border: thin solid #eee;
+}
 
 
 
